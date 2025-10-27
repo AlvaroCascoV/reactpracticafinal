@@ -43,7 +43,7 @@ export default class Jugadores extends Component {
                                         <td>{jugador.nombre}</td>
                                         <td><img src={jugador.imagen} style={{ height: "50px" }} alt='imagen jugador' /></td>
                                         <td>
-                                            <button>Detalles</button>
+                                            <Link className='btn btn-success' to="/detalles" state={{ idJugador: jugador.idJugador }}>Detalles</Link>
                                         </td>
                                     </tr>
                                 )

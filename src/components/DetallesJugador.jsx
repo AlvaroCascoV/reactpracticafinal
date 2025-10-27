@@ -26,17 +26,16 @@ export default class DetallesJugador extends Component {
     render() {
         return (
             <div>
-                <Link to={"/equipos/" + this.props.idJugador} className='btn btn-success'>Volver</Link>
-                <ul className='list-group'></ul>
+                <div>
+                    <h1>Detalles del jugador {this.state.jugador.nombre}</h1>
+                    <p>ID: {this.state.jugador.idJugador}</p>
+                    <img src={this.state.jugador.imagen} alt='imagen jugador' style={{ height: "50px" }} />
+                    <p>Pais: {this.state.jugador.pais}</p>
+                    <p>Posicion: {this.state.jugador.posicion}</p>
+                    <p>Fecha de nacimiento: {this.state.jugador.fechaNacimiento}</p>
+                    <Link className='btn btn-success' to="/jugadores" state={{ idEquipo: this.state.jugador.idEquipo }}>Volver a jugadores</Link>
+                </div>
             </div>
         )
     }
 }
-
-// fechaNacimiento:"11/05/1992"
-// idEquipo:3
-// idJugador:31
-// imagen:"https://tmssl.akamaized.net//images/portrait/header/108390-1572942947.jpg"
-// nombre:"Thibaut Courtois"
-// pais:"Bélgica"
-// posicion:"Portero"
