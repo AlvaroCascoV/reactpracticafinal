@@ -6,6 +6,7 @@ import Apuestas from './components/Apuestas'
 import Equipos from './components/Equipos'
 import Jugadores from './components/Jugadores'
 import DetallesJugador from './components/DetallesJugador'
+import InsertarApuesta from './components/InsertarApuesta'
 
 
 export default class Router extends Component {
@@ -31,6 +32,7 @@ export default class Router extends Component {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/apuestas" element={<Apuestas />} />
+                    <Route path="/insertarapuesta" element={<InsertarApuesta />} />
                     <Route path="/equipos/:idEquipo" element={<EquiposElement />} />
                     <Route path="/jugadores" element={<JugadoresElement />} />
                     <Route path="/detalles" element={<DetallesElement />} />
